@@ -1,0 +1,205 @@
+/* Stylesheet by Bob Cowling, 2017 */
+
+@font-face {
+    font-family: newparks;
+    src: url(newparks.otf);
+}
+
+p {
+    font-size: 14pt;    
+    font-family: newparks;
+    padding-top: 75px;
+}
+
+h2 {
+   font-size: 14pt;    
+   font-family: newparks; 
+}
+
+form {
+  padding-top: 12px;
+}
+
+#map {
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#toggle {
+    z-index: 200000;
+}
+
+.navbar navbar-inverse navbar-fixed-top {
+    color: black;
+    
+}
+
+html {
+    background-color: #B6E69E;
+    
+}
+
+.ui-autocomplete-loading {
+    background: white url('images/ui-anim_basic_16x16.gif') right center no-repeat;
+  }
+
+div.cartodb-searchbox {     
+   float: left;
+   margin: 80px 80px 30px 10px;           
+    
+}
+
+li {
+
+border-bottom: 1px solid white;
+padding: 15px 10px; 
+cursor: pointer;
+}
+
+
+/*
+
+#layer_selector {
+position: absolute;
+
+padding: 0;
+  
+}
+
+#layer_selector ul {
+padding: 0; margin: 0;
+list-style-type: none;
+}
+
+#layer_selector li {
+border-bottom: 1px solid #999;
+padding: 15px 10px;
+font-family: "Helvetica", Arial;
+font-size: 13px;
+color: #444;
+cursor: auto;  
+}
+
+#layer_selector li:hover {
+background-color: #F0F0F0;
+cursor: pointer;
+}
+*/
+
+
+#layer_selector li.selected {
+background-color: #5CB85C;
+}
+
+#wraper-city-selector {
+position: relative;
+width: 100%;    
+
+}
+
+.js-city-selector {
+width: 175px;
+}
+
+#controls {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+}
+
+#form {
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: left;
+  line-height: 16px;
+  width:375px;
+  float: left;
+  z-index: 10000;    
+}
+
+
+
+/*
+.nav-sidebar { 
+    width: 100%;
+    padding: 0; 
+    border-right: 1px solid #ddd;
+}
+.nav-sidebar a {
+    color: #333;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
+    -webkit-border-radius: 4px 0 0 4px; 
+    -moz-border-radius: 4px 0 0 4px; 
+    border-radius: 4px 0 0 4px; 
+}
+.nav-sidebar .active a { 
+    cursor: default;
+    background-color: #428bca; 
+    color: #fff; 
+    text-shadow: 1px 1px 1px #666; 
+}
+.nav-sidebar .active a:hover {
+    background-color: #428bca;   
+}
+.nav-sidebar .text-overflow a,
+.nav-sidebar .text-overflow .media-body {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; 
+}
+
+ Right-aligned sidebar 
+.nav-sidebar.pull-right { 
+    border-right: 0; 
+    border-left: 1px solid #ddd; 
+}
+.nav-sidebar.pull-right a {
+    -webkit-border-radius: 0 4px 4px 0; 
+    -moz-border-radius: 0 4px 4px 0; 
+    border-radius: 0 4px 4px 0; 
+}
+*/ 
+
+
+.navbar-brand {
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;	
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.sidebar-brand {
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+    list-style-type: none;
+    background: black;
+    padding: 5px;
+    border-bottom: none;
+    
+}
+
+h5 {
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+

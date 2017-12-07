@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Pictured Rocks National Lakeshore</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.css" />
+        <link rel="stylesheet" href="js/easy-button.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+     <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<!--[if IE<9]>
+			<link rel="stylesheet" href="css/style.ie.css">
+		<![endif]-->    
+
+</head>
+
+<body>    
+   
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <li class="sidebar-brand"><h5>Pictured Rocks National Lakeshore</h5></li>           
+            <ul class="sidebar-nav" id="layer_selector">                
+           <center><p>Filter Scenic Sites</p></center>           
+        <li data="all" class="selected">All Amenities</li>
+        <li data="rest">Restrooms</li>
+        <li data="handicapped">Wheelchair Accessible</li>
+        <li data="dogs">Dogs Allowed</li>
+        <li data="picnic">Picnic Area</li>
+        <li data="beaches">Swimming Area</li>        
+      </ul>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>        
+        <center><div id=title><h2>Find Scenic Sites</h2></div>
+        <div id="wraper-city-selector">
+        <select class="js-city-selector">
+        <option value="#">Select a feature</option>
+        </select>
+            </div></center>
+            <br>
+            <center><h2>Suggest a Scenic Site</h2></center>
+            <center><button type="button" class="btn btn-success" onclick="startEdits()" >Start Editing</button>
+                <button type="button" class="btn btn-success" onclick="stopEdits()" >Stop Editing</button></center>
+        </div>
+        <!-- /#sidebar-wrapper -->        
+
+    </div>
+    <!-- /#wrapper -->
+     <div id="dialog" title="Point Information">   
+      <form>
+        <fieldset>
+          <label for="username">Name of Point</label>
+          <input type="text" name="username" id="username" placeholder="Enter Point Name" class="text ui-widget-content ui-corner-all">
+          <label for="description">About this Point</label>
+          <input type="text" name="description" id="description" placeholder="Description for this point" class="text ui-widget-content ui-corner-all">
+          <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+      </form>
+    </div>
+ <div id="map"></div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <!--put your external script links here-->
+        <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+        <script src="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+        <script src="js/easy-button.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $('#map').click(function(e) {    
+        if ($( "#wrapper" ).hasClass( "toggled" )) {    
+    
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    }
+    })
+    </script>
+    
+    <script type="infowindow/html" id="iw_template"> 
+            <div class="cartodb-popup v2 custom_infowindow"">
+              <a href="#close" class="cartodb-popup-close-button close">x</a>
+               <div class="cartodb-popup-content-wrapper">
+                 <div class="cartodb-popup-header">
+                   <img style="width: 100%" src="{{image_url}}"></src>
+                 </div>
+                 <div class="cartodb-popup-content">                   
+                   <h3>{{content.data.name}}</h3>
+                   <h4>Type: {{content.data.type}}</h4>
+                 </div>
+               </div>
+               <div class="cartodb-popup-tip-container"></div>
+            </div>
+        </script>   
+
+</body>
+
+</html>
